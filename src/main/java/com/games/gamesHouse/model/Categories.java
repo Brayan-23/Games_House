@@ -19,9 +19,11 @@ public class Categories {
   @Column(unique = true)
   private String name;
 
+  private String description;
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "category", cascade = CascadeType.REMOVE)
   @JsonIgnoreProperties("category")
   private List<Products> products;
+
 
   public Long getId() {
     return id;
@@ -54,7 +56,6 @@ public class Categories {
   public void setProducts(List<Products> products) {
     this.products = products;
   }
-  private String description;
 
 
 }

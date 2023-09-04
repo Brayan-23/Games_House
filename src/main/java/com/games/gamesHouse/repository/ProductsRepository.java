@@ -7,9 +7,10 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface ProductsRepository  extends JpaRepository<Products, Long> {
+public interface ProductsRepository extends JpaRepository<Products, Long> {
 
   List<Products> findAllByNameContainingIgnoreCase(@Param("name") String name);
+
   List<Products> findAllByBrandContainingIgnoreCase(@Param("brand") String brand);
 
 }
