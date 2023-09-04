@@ -15,7 +15,7 @@ public class Categories {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @NotBlank(message = "The attribute is Mandatory")
+  @NotBlank(message = "The attribute name is Mandatory")
   @Column(unique = true)
   private String name;
 
